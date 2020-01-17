@@ -8,7 +8,6 @@ namespace Pokedex.API.Domain.Models
     public class Horario : Entity
     {
         public string Intervalo { get; set; }
-
         public bool Disponivel { get; set; }
 
         public Guid Id_Aluno { get; set; }

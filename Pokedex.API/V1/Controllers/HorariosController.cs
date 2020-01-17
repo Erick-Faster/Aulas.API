@@ -52,7 +52,8 @@ namespace Pokedex.API.Controllers.V1
             return Ok(horarioResource);
         }
 
-        [ClaimsAuthorize("Horario","PostAsync")]
+        [AllowAnonymous]
+        //[ClaimsAuthorize("Horario","PostAsync")]
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody]SaveHorarioResource resource)
         {
@@ -69,7 +70,8 @@ namespace Pokedex.API.Controllers.V1
             return Ok(horarioResource);
         }
 
-        [ClaimsAuthorize("Horario","PutAsync")]
+        [AllowAnonymous]
+        //[ClaimsAuthorize("Horario","PutAsync")]
         [HttpPut("{id:Guid}")]
         public async Task<IActionResult> PutAsync(Guid id, [FromBody]SaveHorarioResource resource)
         {
@@ -86,7 +88,8 @@ namespace Pokedex.API.Controllers.V1
             return Ok(horarioResource);
         }
 
-        [ClaimsAuthorize("Horario","DeleteAsync")]
+        [AllowAnonymous]
+        //[ClaimsAuthorize("Horario","DeleteAsync")]
         [HttpDelete("{id:Guid}")]
         public async Task<IActionResult> DeleteAsync(Guid id)
         {
